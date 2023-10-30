@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2º DAM</title>
+</head>
+<body>
+    <h1>Lista de Alumnos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>DNI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterar sobre la lista de alumnos y mostrar cada uno en una fila de la tabla -->
+            <th:block th:each="alumno : ${alumnos}">
+                <tr>
+                    <td th:text="${alumno.id}"></td>
+                    <td th:text="${alumno.nombre}"></td>
+                    <td th:text="${alumno.apellido}"></td>
+                    <td th:text="${alumno.edad}"></td>
+                    <td th:text="${alumno.dni}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <a href="/nuevo">Añadir Nuevo Alumno</a>
+</body>
+</html>
